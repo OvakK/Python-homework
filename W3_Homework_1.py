@@ -1,13 +1,13 @@
-#STRING#########################################################################################################
+# STRING#########################################################################################################
 ##################################################################################################################
 
-#1. Write a Python program to calculate the length of a string.
+# 1. Write a Python program to calculate the length of a string.
 #
 # string = 'abc'
 #
 # print(len(string))
 
-#2. Write a Python program to count the number of characters (character frequency) in a string.
+# 2. Write a Python program to count the number of characters (character frequency) in a string.
 #
 # string = 'hello'
 #
@@ -20,8 +20,8 @@
 #         d[x] = 1
 # print(d)
 
-#3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
-#If the string length is less than 2, return the empty string instead.
+# 3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
+# If the string length is less than 2, return the empty string instead.
 #
 # string = 'Hello'
 #
@@ -33,8 +33,8 @@
 #     answer = string[:2] + string[-2:]
 #     print(answer)
 
-#4. Write a Python program to get a string from a given string where all occurrences of its first char
-#have been changed to '$', except the first char itself.
+# 4. Write a Python program to get a string from a given string where all occurrences of its first char
+# have been changed to '$', except the first char itself.
 #
 # string = 'ararat'
 #
@@ -47,8 +47,8 @@
 #         answer += x
 # print(answer)
 
-#5. Write a Python program to get a single string from two given strings,
-#separated by a space and swap the first two characters of each string.
+# 5. Write a Python program to get a single string from two given strings,
+# separated by a space and swap the first two characters of each string.
 #
 # string1 = 'hello'
 # string2 = 'world'
@@ -57,9 +57,9 @@
 #
 # print(answer)
 
-#6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3).
-#If the given string already ends with 'ing', add 'ly' instead.
-#If the string length of the given string is less than 3, leave it unchanged.
+# 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3).
+# If the given string already ends with 'ing', add 'ly' instead.
+# If the string length of the given string is less than 3, leave it unchanged.
 #
 # string = 'hello'
 #
@@ -83,7 +83,7 @@
 #
 # print(string)
 
-#8. Write a Python function that takes a list of words and return the longest word
+# 8. Write a Python function that takes a list of words and return the longest word
 # and the length of the longest one.
 #
 # def long_word(lst):
@@ -97,7 +97,7 @@
 #
 # print(long_word(['hello', 'terraform', 'docker']))
 
-#9. Write a Python program to remove the nth index character from a nonempty string.
+# 9. Write a Python program to remove the nth index character from a nonempty string.
 #
 # def remove(mstr, index):
 #     mstr = mstr[:index] + mstr[index + 1:]
@@ -105,7 +105,7 @@
 #
 # print(remove('hello', 1))
 
-#10. Write a Python program to change a given string to a newly string
+# 10. Write a Python program to change a given string to a newly string
 # where the first and last chars have been exchanged.
 #
 # def exchange(mstr):
@@ -114,7 +114,7 @@
 #
 # print(exchange('hello'))
 
-#11. Write a Python program to remove characters that have odd index values in a given string.
+# 11. Write a Python program to remove characters that have odd index values in a given string.
 #
 # def odd_remove(mstr):
 #     answer = mstr[::2]
@@ -122,7 +122,7 @@
 #
 # print(odd_remove('python'))
 
-#12. Write a Python program to count the occurrences of each word in a given sentence.
+# 12. Write a Python program to count the occurrences of each word in a given sentence.
 #
 # def occur(mstr):
 #     d = dict()
@@ -136,7 +136,7 @@
 #
 # print(occur('one two three five five'))
 
-#13. 44. Write a Python program to print the index of a character in a string.
+# 13. 44. Write a Python program to print the index of a character in a string.
 #
 # def char_index(mstr):
 #     for i in range(len(mstr)):
@@ -145,7 +145,7 @@
 #
 # print(char_index('hello'))
 
-#14. 90. Write a Python program to remove duplicate words from a given string.
+# 14. 90. Write a Python program to remove duplicate words from a given string.
 #
 # def rem_dup(mstr):
 #     lst1 = mstr.split()
@@ -157,7 +157,7 @@
 #
 # print(rem_dup('Python Exercises Practice Solution Exercises'))
 
-#15. 34. Write a Python program to print the following integers with '*' to the right of the specified width.
+# 15. 34. Write a Python program to print the following integers with '*' to the right of the specified width.
 #
 # def integer(mstr, char):
 #     answer = ''
@@ -170,10 +170,10 @@
 #
 # print(integer('hello', 'l'))
 
-#LIST###########################################################################################################
+# LIST###########################################################################################################
 ################################################################################################################
 
-#1. 10. Write a Python program to find the list of words that are longer than n from a given list of words.
+# 1. 10. Write a Python program to find the list of words that are longer than n from a given list of words.
 #
 # def longer(lst, n):
 #     longer_words = []
@@ -184,13 +184,13 @@
 #
 # print(longer(['Hello', 'from', 'my', 'python', 'function'], 3))
 
-#2. 27. Write a Python program to find the second smallest number in a list.
+# 2. 27. Write a Python program to find the second smallest number in a list.
 #
 # ls = [6, 3, 8, 1, 9, 134, 87, 23]
 # ls.sort()
 # print(ls[1])
 
-#3. 52. Write a Python program to compute the difference between two lists.
+# 3. 52. Write a Python program to compute the difference between two lists.
 #
 # def difference(lst1, lst2):
 #     dif_lst = []
@@ -201,7 +201,7 @@
 #
 # print(difference([1, 2, 3, 5, 'asd'], [6, 7, 3, 'asd']))
 
-#4. 57. Write a Python program to check if all items in a given list of strings are equal to a given string.
+# 4. 57. Write a Python program to check if all items in a given list of strings are equal to a given string.
 #
 # def equal(lst, mstr):
 #     flag = False
@@ -212,7 +212,7 @@
 #
 # print(equal(['asd', 'tre', 'hgf', 'vbn'], 'vb'))
 
-#5. 63. Write a Python program to insert a given string at the beginning of all items in a list.
+# 5. 63. Write a Python program to insert a given string at the beginning of all items in a list.
 
 # def insert(lst, mstr):
 #     lst1 = []
@@ -223,7 +223,7 @@
 #
 # print(insert([1, 2, 3, 4, 5], 'str'))
 
-#6. 65. Write a Python program to move all zero digits to the end of a given list of numbers.
+# 6. 65. Write a Python program to move all zero digits to the end of a given list of numbers.
 #
 # def zero(lst):
 #     a = lst.count(0)
@@ -236,7 +236,7 @@
 #
 # print(zero([1, 2, 3,4,5,6,0,0,0,3,4,5,6,7,8,0,2,3,4,0]))
 
-#7. 70. Write a Python program to find items starting with a specific character from a list.
+# 7. 70. Write a Python program to find items starting with a specific character from a list.
 #
 # def find(lst, char):
 #     lst1 = []
@@ -247,7 +247,7 @@
 #
 # print(find(['qwe', 'dfg', 'asd', 'mnb', 'asdf'], 'as'))
 
-#8. 66. Write a Python program to find the list in a list of lists whose sum of elements is the highest.
+# 8. 66. Write a Python program to find the list in a list of lists whose sum of elements is the highest.
 #
 # def hi_sum(lst):
 #     max = 0
@@ -260,7 +260,7 @@
 #
 # print(hi_sum([[1,2,3], [4,5,6], [10,11,12], [7,8,9]]))
 
-#9. 35. Write a Python program to create a list by concatenating a given list with a range from 1 to n.
+# 9. 35. Write a Python program to create a list by concatenating a given list with a range from 1 to n.
 #
 # def conc(lst, n):
 #     lst1 = []
@@ -271,7 +271,7 @@
 #
 # print(conc(['p', 'q'], 5))
 
-#10. 29. Write a Python program to get unique values from a list.
+# 10. 29. Write a Python program to get unique values from a list.
 #
 # def unique(lst):
 #     lst1 = []
@@ -280,10 +280,10 @@
 #             lst1.append(x)
 #     return lst1
 
-#DICT#############################################################################################################
+# DICT#############################################################################################################
 ##################################################################################################################
 
-#1. 3. Write a Python script to concatenate the following dictionaries to create a new one.
+# 1. 3. Write a Python script to concatenate the following dictionaries to create a new one.
 # d = dict()
 # def upd(*args):
 #     for x in args:
@@ -297,7 +297,7 @@
 # print(upd(dic1, dic2, dic3))
 
 
-#2. 7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included)
+# 2. 7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included)
 # and the values are the square of the keys
 # d = dict()
 # def upd(n):
@@ -307,7 +307,7 @@
 #
 # print(upd(15))
 
-#3 13. Write a Python program to map two lists into a dictionary.
+# 3 13. Write a Python program to map two lists into a dictionary.
 # d = dict()
 # def map(lst1, lst2):
 #     d = dict(zip(lst1, lst2))
@@ -315,7 +315,7 @@
 #
 # print(map([1, 2, 3], ['a', 'b', 'c']))
 
-#4. 24. Write a Python program to create a dictionary from a string.
+# 4. 24. Write a Python program to create a dictionary from a string.
 #
 # d = dict()
 # def dict_from_string(mstr):
@@ -325,7 +325,7 @@
 #
 # print(dict_from_string('hello'))
 
-#5. 34. Write a Python program to count the number of items in a dictionary value that is a list.
+# 5. 34. Write a Python program to count the number of items in a dictionary value that is a list.
 #
 # def cnt(d):
 #     count = 0
@@ -338,7 +338,7 @@
 # 'y': [21, 22, 23, 24, 25, 26, 27, 28, 29],
 # 'z': [31, 32, 33, 34, 35, 36, 37, 38, 39], 'a': 1}))
 
-#6. 45. Write a Python program to verify that all values in a dictionary are the same.
+# 6. 45. Write a Python program to verify that all values in a dictionary are the same.
 #
 # def same(d):
 #     x = d['a']
@@ -350,4 +350,4 @@
 #
 # print(same({'a':12, 'c':12, 'b': 12}))
 
-#7.
+# 7.

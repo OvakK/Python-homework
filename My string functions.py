@@ -126,7 +126,6 @@
 #     return answ
 
 
-
 # 11.STARTWITH
 # def stwth(a):
 #     pref = input("Enter prefix > ")

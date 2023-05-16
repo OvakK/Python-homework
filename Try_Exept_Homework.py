@@ -2,6 +2,7 @@
 # XLSXWRITER TRY EXCEPT
 ####################################################
 import argparse
+
 try:
     import xlsxwriter
 except ModuleNotFoundError:
@@ -9,6 +10,7 @@ except ModuleNotFoundError:
 Only 'yes' will be accepted to approve. > ''')
     if var == 'yes':
         import os
+
         os.system("pip3 install XlsxWriter")
         import xlsxwriter
     else:
@@ -17,10 +19,11 @@ Only 'yes' will be accepted to approve. > ''')
 
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file', required=True, help = 'File .txt')
-    parser.add_argument('-x', '--xlsx', default="Tablica1", help = 'File .exel')
+    parser.add_argument('-f', '--file', required=True, help='File .txt')
+    parser.add_argument('-x', '--xlsx', default="Tablica1", help='File .exel')
     args = parser.parse_args()
     return args.file, args.xlsx
+
 
 def get_content(fname):
     try:
@@ -35,6 +38,7 @@ def get_content(fname):
     c = sorted(b, reverse=True, key=lambda x: x[2])
     return c
 
+
 def create_workbook(wbname):
     workbook = xlsxwriter.Workbook(wbname)
     worksheet = workbook.add_worksheet()
@@ -47,6 +51,7 @@ def create_workbook(wbname):
     worksheet.write('D1', 'Proffession', format1)
     return workbook, worksheet
 
+
 def fill_data(workbook, worksheet, cnt):
     for i, (name, surname, age, proffession) in enumerate(cnt, start=2):
         worksheet.write(f'A{i}', name)
@@ -55,11 +60,13 @@ def fill_data(workbook, worksheet, cnt):
         worksheet.write(f'D{i}', proffession)
     workbook.close()
 
+
 def main():
     filename, xlsxname = get_arguments()
     content = get_content(filename)
-    wb, ws =  create_workbook(xlsxname)
+    wb, ws = create_workbook(xlsxname)
     fill_data(wb, ws, content)
+
 
 main()
 
@@ -78,6 +85,7 @@ ls = f.read().split('\n')
 vop = ls[:-1]
 res = ''
 
+
 def quest_list(x):
     questions = []
     while len(questions) < 10:
@@ -86,12 +94,14 @@ def quest_list(x):
             questions.append(ques)
     return questions
 
+
 def quest_dict(x):
     md = {}
     for el in x:
         q, a = el.split("?")
         md[q] = a.split(",")
     return md
+
 
 def game(x):
     name = input("Input your name >")
@@ -109,10 +119,11 @@ def game(x):
             print("Correct")
             xp += 1
         else:
-            print("Incorrect. Correct answer was ", ca )
+            print("Incorrect. Correct answer was ", ca)
     res = f'{name} - ' + str(xp) + ' pravilnyh otvetov'
     print(res)
     return res
+
 
 def get_content(game_results):
     try:
@@ -125,8 +136,9 @@ def get_content(game_results):
         b.append(x.split())
     f.close()
     b.append(game_results.split())
-    r_list = sorted(b, reverse = True, key = lambda x: x[2])
+    r_list = sorted(b, reverse=True, key=lambda x: x[2])
     return r_list
+
 
 def fill_data(sorted_results):
     p = []
@@ -146,5 +158,6 @@ def main():
     score = game(q_dict)
     result_list = get_content(score)
     fill_data(result_list)
+
 
 main()

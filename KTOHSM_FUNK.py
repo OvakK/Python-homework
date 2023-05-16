@@ -1,4 +1,5 @@
 import random
+
 vop = ["Nazovite stolicy Armenii?Yerevan,Moscow,Paris,Riga",
        "Samaya bolshaya strana v mire?Russia,USA,Canada,China",
        "Samaya vysokaya gora na zemle?Everest,Elbrus,Ararat,Kazbek",
@@ -15,6 +16,7 @@ vop = ["Nazovite stolicy Armenii?Yerevan,Moscow,Paris,Riga",
        "Nazovite samoe bystroe syhopytnoe givotnoe?Gepard,Tiger,Chelovek,Nosorog",
        "Kto avtor romana Otvergennye?V.Gugo,W.Shekspir,M.Sholokhov,F.Kavka"]
 
+
 def quest_list(x):
     questions = []
     while len(questions) < 10:
@@ -23,12 +25,14 @@ def quest_list(x):
             questions.append(ques)
     return questions
 
+
 def quest_dict(x):
     md = {}
     for el in x:
         q, a = el.split("?")
         md[q] = a.split(",")
     return md
+
 
 def game(x):
     xp = 0
@@ -45,14 +49,14 @@ def game(x):
             print("Correct")
             xp += 1
         else:
-            print("Incorrect. Correct answer was ", ca )
-    return "You got %d/%d" %(xp, len(x))
-
+            print("Incorrect. Correct answer was ", ca)
+    return "You got %d/%d" % (xp, len(x))
 
 
 def main():
     q_list = quest_list(vop)
     q_dict = quest_dict(q_list)
     print(game(q_dict))
+
 
 main()

@@ -1,10 +1,11 @@
 import argparse
 import xlsxwriter
 
+
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file', required=True, help = 'File .txt')
-    parser.add_argument('-x', '--xlsx', default="Tablica1", help = 'File .exel')
+    parser.add_argument('-f', '--file', required=True, help='File .txt')
+    parser.add_argument('-x', '--xlsx', default="Tablica1", help='File .exel')
     args = parser.parse_args()
     return args.file, args.xlsx
 
@@ -14,7 +15,7 @@ def get_content(data_file):
         lst = []
         for el in f:
             lst.append(el.split())
-        sorted_list = sorted(lst, reverse=True, key=lambda x : x[2])
+        sorted_list = sorted(lst, reverse=True, key=lambda x: x[2])
         for x in sorted_list:
             x[2] = int(x[2])
         return sorted_list
@@ -32,6 +33,7 @@ def create_workbook(wbname):
     worksheet.write('D1', 'Profession', format1)
     return workbook, worksheet
 
+
 def fill_data(workbook, worksheet, cont):
     format2 = workbook.add_format(({'bold': False, 'bg_color': '#008000'}))
     for i, (name, surname, age, profession) in enumerate(cont, start=2):
@@ -43,13 +45,11 @@ def fill_data(workbook, worksheet, cont):
     workbook.close()
 
 
-
-
 def main():
     filename, xlsxname = get_arguments()
     mylst = get_content(filename)
     work_b, work_sh = create_workbook(xlsxname)
     fill_data(work_b, work_sh, mylst)
 
-main()
 
+main()

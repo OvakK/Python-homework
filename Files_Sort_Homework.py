@@ -1,6 +1,7 @@
 import os
 import argparse
 
+
 #############################################################
 # Name: get_filenames
 # Brief: This function parse the source directory and create a list of files in it.
@@ -12,7 +13,7 @@ import argparse
 
 def get_filenames():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--folder', required=True, help = 'Name of the folder to be sorted')
+    parser.add_argument('-f', '--folder', required=True, help='Name of the folder to be sorted')
     args = parser.parse_args()
     file_names = []
     for file in os.listdir(args.folder):
@@ -56,6 +57,7 @@ def mkdir(extentions, location):
         if os.path.isdir(os.path.join(location, dir)):
             dirs.append(dir)
 
+
 #############################################################
 # Name: move_files
 # Brief: This function cheks content of source directory and move files in corresponding folder
@@ -67,8 +69,7 @@ def mkdir(extentions, location):
 def move_files(file_sourse):
     for file in os.listdir(file_sourse):
         if os.path.isfile(os.path.join(file_sourse, file)):
-            os.replace(file_sourse+file, file_sourse+'Folder'+os.path.splitext(file)[1]+'/'+file)
-
+            os.replace(file_sourse + file, file_sourse + 'Folder' + os.path.splitext(file)[1] + '/' + file)
 
 
 def main():
@@ -77,5 +78,6 @@ def main():
     mkdir(ext_list, path)
     move_files(path)
     print(os.system(f'tree {path}'))
+
 
 main()

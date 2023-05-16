@@ -5,6 +5,7 @@ ls = f.read().split('\n')
 vop = ls[:-1]
 res = ''
 
+
 def quest_list(x):
     questions = []
     while len(questions) < 10:
@@ -13,12 +14,14 @@ def quest_list(x):
             questions.append(ques)
     return questions
 
+
 def quest_dict(x):
     md = {}
     for el in x:
         q, a = el.split("?")
         md[q] = a.split(",")
     return md
+
 
 def game(x):
     name = input("Input your name >")
@@ -36,10 +39,11 @@ def game(x):
             print("Correct")
             xp += 1
         else:
-            print("Incorrect. Correct answer was ", ca )
+            print("Incorrect. Correct answer was ", ca)
     res = f'{name} - ' + str(xp) + ' pravilnyh otvetov'
     print(res)
     return res
+
 
 def get_content(game_results):
     f = open('otv_list')
@@ -48,8 +52,9 @@ def get_content(game_results):
         b.append(x.split())
     f.close()
     b.append(game_results.split())
-    r_list = sorted(b, reverse = True, key = lambda x: x[2])
+    r_list = sorted(b, reverse=True, key=lambda x: x[2])
     return r_list
+
 
 def fill_data(sorted_results):
     p = []
@@ -70,5 +75,5 @@ def main():
     result_list = get_content(score)
     fill_data(result_list)
 
-main()
 
+main()
